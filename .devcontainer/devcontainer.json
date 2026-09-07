@@ -1,0 +1,16 @@
+{
+    "name": "BlueMath",
+    "image": "geoocean/rocky8:1.5",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.datawrangler"
+            ]
+        }
+    }
+}
