@@ -92,25 +92,41 @@ The repository will be progressively updated with the material required for each
 
 ## Course program
 
-### Day 1 — Introduction to BlueMath and statistical characterization
+### Day 1 — Statistical Modeling & Climate Emulation
 
-- Introduction to BlueMath
-- BlueMath philosophy and modular architecture
-- Working with environmental datasets
-- Preprocessing and exploratory analysis
-- Dimensionality reduction
-- Classification and clustering techniques
-- Weather Types and their application to coastal climate
+*From historical climate data to synthetic climate*
 
-### Day 2 — Statistical modeling and coastal applications
+| Time | Topic | Concepts | BlueMath Notebooks |
+|---|---|---|---|
+| 9:00–9:10 | Welcome | | |
+| 9:10–9:30 | Introduction to BlueMath | What is BlueMath? | |
+| 9:30–10:00 | Global Databases | How to extract databases from servers | `BlueMath/toolkit/data`<br>`Download_GEBCO_bathymetry_data.ipynb`<br>`SeaLevel_Data.ipynb` |
+| 10:00–10:30 | Reducing Climate Complexity | PCA — How can I obtain the dominant climate variability from a dataset? | `BlueMath/toolkit/datamining` |
+| 10:30–10:45 | Break | | |
+| 10:45–12:00 | Weather typing / classification | KMA, weather types — How do I identify recurring climate states? | |
+| 12:00–1:30 | Lunch Break | | |
+| 1:30–2:15 | Statistical Downscaling | Regression (linear/WT) | `BlueMath/methods/statistical_downscaling` |
+| 2:15–3:15 | Climate emulation | ALR / stochastic simulation of weather types | `ALR-AWT`, `ALR-DWT` |
+| 3:15–3:30 | Break | | |
+| 3:30–4:30 | Hands-on climate emulator | Build a long synthetic climate sequence + diagnostics | |
 
-- Statistical relationships between predictors and predictands
-- Multivariate probability distributions
-- Climate and coastal data modeling
-- Hybrid and surrogate modeling approaches
-- Practical BlueMath workflows
-- Application examples
-- Developing your own BlueMath workflow
+### Day 2 — Hybrid Statistical–Numerical Modeling
+
+*From climate forcing to local impacts and risk*
+
+| Time | Topic | Concepts | BlueMath Notebooks |
+|---|---|---|---|
+| 9:00–9:45 | Wave Downscaling — Why hybrid modeling? | Link emulator-hybrid / Statistical vs dynamical vs hybrid downscaling | |
+| 9:45–10:30 | Running numerical models with BlueMath | Model wrappers, parallelization | |
+| 10:30–10:45 | Break | | |
+| 10:45–11:45 | Hands-on BinWaves | | |
+| 11:45–1:15 | Lunch Break | | |
+| 1:15–2:00 | Design of numerical experiments and metamodeling | Sampling / Selection / RBF / GPR | `BlueMath/toolkit/datamining`<br>`MDA_vs_MKeans.ipynb` |
+| 2:00–3:00 | Hands-on HySwash | | |
+| 3:00–3:30 | HySwash applications | CHySwash + Veggie | |
+| 3:30–3:45 | Break | | |
+| 3:45–4:15 | HyFlood | | |
+| 4:15–5:00 | Exploring Climate Services | | |
 
 The detailed schedule and associated notebooks will be available in this repository.
 
@@ -176,7 +192,12 @@ Participants are encouraged to modify the examples and explore the methodologies
 
 The course is organized by the **GeoOcean Group at the University of Cantabria** in collaboration with **Oregon State University**.
 
-Instructor information will be added here.
+- Fernando J. Méndez (1h30)
+- Laura Cagigal (3h20)
+- Pablo Alonso-Alguacil (2h45)
+- Jared Ortiz Angulo (2h15)
+- Peter Ruggiero
+- Alba Ricondo (1h30)
 
 ---
 
@@ -199,3 +220,19 @@ For information about the license and conditions of use of BlueMath, please refe
 For questions related to the course, please open an issue in the **[course repository](https://github.com/GeoOcean/BlueMath_Course_Corvallis/issues)**.
 
 For questions, issues, or contributions related to BlueMath itself, please visit the **[BlueMath repository](https://github.com/GeoOcean/BlueMath)**.
+
+## Agenda — Resumen adaptado
+
+- **Objetivo:** Curso práctico de dos días para introducir el framework `BlueMath`, sus módulos principales y flujos de trabajo reproducibles aplicados a datos costeros y oceánicos.
+- **Fechas y lugar:** 5–6 de octubre de 2026 — Oregon State University, Corvallis.
+- **Público objetivo:** Investigadores, estudiantes de posgrado y profesionales con experiencia básica en Python interesados en análisis de datos ambientales y aplicaciones costeras.
+
+- **Estructura general:**
+  - Día 1 — Statistical Modeling & Climate Emulation (de datos climáticos históricos a clima sintético): bases de datos globales, PCA, weather typing (KMA), downscaling estadístico y emulación climática (ALR) con sesión práctica de construcción de un emulador climático.
+  - Día 2 — Hybrid Statistical–Numerical Modeling (del forzamiento climático a impactos y riesgo locales): downscaling de oleaje, wrappers de modelos numéricos, diseño de experimentos numéricos y metamodelado, y sesiones prácticas con BinWaves, HySwash/CHySwash+Veggie y HyFlood, finalizando con Climate Services.
+
+- **Material y requisitos:** Notebooks, conjuntos de datos y ejercicios estarán disponibles en el repositorio. Se recomienda conocimientos básicos de Python y bibliotecas como `numpy`, `pandas`, `xarray`, `matplotlib` y `scikit-learn`.
+- **Logística:** El curso es presencial y orientado a prácticas; las instrucciones de instalación del entorno Python y dependencias estarán en la carpeta `environment` del repositorio.
+- **Resultados esperados:** Al finalizar, los participantes podrán usar `BlueMath` para construir flujos reproducibles, adaptar metodologías a sus datos y prototipar modelos estadísticos o emuladores para problemas costeros.
+
+- **Contacto:** Abrir un issue en la [repositorio del curso](https://github.com/GeoOcean/BlueMath_Course_Corvallis/issues) para dudas o solicitudes específicas.
