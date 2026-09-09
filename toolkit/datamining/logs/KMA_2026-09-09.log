@@ -1,0 +1,13 @@
+2026-09-09 11:51:01,713 - KMA - INFO - Setting self.num_workers to 1. Change it using self.set_num_processors_to_use method.
+2026-09-09 11:51:01,735 - KMA - INFO - 
+        ---------------------------------------------------------------------------------
+        | Initializing KMA object with the following parameters:
+        |    - num_clusters: 3
+        |    - seed: None
+        |    - algorithm: kmeans
+        |    - distance_metric: None
+        |    - distance_matrix: None
+        | For more information, please refer to the documentation.
+        ---------------------------------------------------------------------------------
+        
+2026-09-09 11:51:01,735 - KMA - INFO - KMA object created with 3 clusters, algorithm 'kmeans', and seed None.
