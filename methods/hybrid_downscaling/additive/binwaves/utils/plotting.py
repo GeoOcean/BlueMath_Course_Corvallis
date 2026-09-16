@@ -400,6 +400,8 @@ def plot_cases_grid(
     colors_to_plot: List[str] = ["green", "orange", "purple"],
     num_directions: int = 24,
     num_frequencies: int = 29,
+    directions: Optional[List[float]] = None,
+    frequencies: Optional[List[float]] = None,
 ) -> None:
     """
     Plot all cases in a grid and selected cases with colored borders.
@@ -416,6 +418,14 @@ def plot_cases_grid(
         Number of directions, by default 24
     num_frequencies : int, optional
         Number of frequencies, by default 29
+    directions : List[float], optional
+        Direction values (deg) for each row, in the same order as the cases
+        (i.e. case_num // num_frequencies). If provided, they are used to
+        label the rows. By default None
+    frequencies : List[float], optional
+        Frequency values (Hz) for each column, in the same order as the
+        cases (i.e. case_num % num_frequencies). If provided, they are used
+        to label the columns. By default None
     """
 
     # Plot all cases in a grid
@@ -446,6 +456,31 @@ def plot_cases_grid(
         0, 0.5, "Directions", ha="center", va="center", rotation="vertical", fontsize=20
     )
     fig.text(0.5, 1, "Frequencies", ha="center", va="center", fontsize=20)
+    # Label each column with its frequency (top row) and each row with its
+    # direction (left column)
+    if frequencies is not None:
+        for ax, freq_val in zip(axes[0, :], frequencies):
+            ax.text(
+                0.5,
+                1.05,
+                f"{freq_val:.3f}",
+                transform=ax.transAxes,
+                ha="center",
+                va="bottom",
+                fontsize=16,
+                rotation=90,
+            )
+    if directions is not None:
+        for ax, dir_val in zip(axes[:, 0], directions):
+            ax.text(
+                -0.05,
+                0.5,
+                f"{dir_val:.0f}°",
+                transform=ax.transAxes,
+                ha="right",
+                va="center",
+                fontsize=16,
+            )
     # Plot selected cases in a grid
     fig_sel, axes_sel = plt.subplots(
         ncols=len(cases_to_plot), nrows=1, figsize=(5 * len(cases_to_plot), 4)
@@ -463,7 +498,12 @@ def plot_cases_grid(
                 cbar_kwargs={"orientation": "horizontal", "shrink": 0.8},
             )
             ax_sel.set_aspect("equal")
-            ax_sel.set_title("")
+            title = ""
+            if directions is not None and frequencies is not None:
+                dir_val = directions[case_to_plot // num_frequencies]
+                freq_val = frequencies[case_to_plot % num_frequencies]
+                title = f"Dir: {dir_val:.0f}°, Freq: {freq_val:.3f} Hz"
+            ax_sel.set_title(title, fontsize=16)
             # Remove ticks and labels
             ax_sel.set_xticks([])
             ax_sel.set_yticks([])
@@ -505,11 +545,12 @@ def plot_case_variables(
     data: xr.Dataset,
     step: int = 10,
     vmin_hs: float = 0,
-    vmax_hs: float = 1.5,
+    vmax_hs: float = 2,
     vmin_tm: float = 0,
     vmax_tm: float = 20,
     vmin_dir: float = 0,
     vmax_dir: float = 360,
+    figsize: Tuple[int, int] = (15, 5),
 ) -> None:
     """
     Plot the significant wave height, mean wave period, and wave direction from the dataset.
@@ -533,7 +574,7 @@ def plot_case_variables(
     vmax_dir : float, optional
         Maximum value for wave direction, by default 360
     """
-    fig, axes = plt.subplots(1, 3, figsize=(20, 4))
+    fig, axes = plt.subplots(1, 3, figsize=figsize)
     data["Hsig"].plot(
         ax=axes[0],
         cbar_kwargs={"label": "Hsig [m]", "orientation": "horizontal", "shrink": 0.7},
