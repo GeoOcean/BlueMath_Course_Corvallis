@@ -192,12 +192,12 @@ Participants are encouraged to modify the examples and explore the methodologies
 
 The course is organized by the **GeoOcean Group at the University of Cantabria** in collaboration with **Oregon State University**.
 
-- Fernando J. Méndez (1h30)
-- Laura Cagigal (3h20)
-- Pablo Alonso-Alguacil (2h45)
-- Jared Ortiz Angulo (2h15)
-- Peter Ruggiero
-- Alba Ricondo (1h30)
+- Fernando J. Méndez (Universidad de Cantabria)
+- Laura Cagigal (Universidad de Cantabria)
+- Pablo Alonso-Alguacil (Universidad de Cantabria)
+- Jared Ortiz Angulo (Universidad de Cantabria)
+- Peter Ruggiero (OSU)
+- Alba Ricondo (OSU)
 
 ---
 
@@ -221,18 +221,18 @@ For questions related to the course, please open an issue in the **[course repos
 
 For questions, issues, or contributions related to BlueMath itself, please visit the **[BlueMath repository](https://github.com/GeoOcean/BlueMath)**.
 
-## Agenda — Resumen adaptado
+## Agenda — Adapted summary
 
-- **Objetivo:** Curso práctico de dos días para introducir el framework `BlueMath`, sus módulos principales y flujos de trabajo reproducibles aplicados a datos costeros y oceánicos.
-- **Fechas y lugar:** 5–6 de octubre de 2026 — Oregon State University, Corvallis.
-- **Público objetivo:** Investigadores, estudiantes de posgrado y profesionales con experiencia básica en Python interesados en análisis de datos ambientales y aplicaciones costeras.
+- **Objective:** A two-day hands-on course introducing the `BlueMath` framework, its main modules, and reproducible workflows applied to coastal and ocean data.
+- **Dates and location:** October 5–6, 2026 — Oregon State University, Corvallis.
+- **Target audience:** Researchers, graduate students, and professionals with basic Python experience interested in environmental data analysis and coastal applications.
 
-- **Estructura general:**
-  - Día 1 — Statistical Modeling & Climate Emulation (de datos climáticos históricos a clima sintético): bases de datos globales, PCA, weather typing (KMA), downscaling estadístico y emulación climática (ALR) con sesión práctica de construcción de un emulador climático.
-  - Día 2 — Hybrid Statistical–Numerical Modeling (del forzamiento climático a impactos y riesgo locales): downscaling de oleaje, wrappers de modelos numéricos, diseño de experimentos numéricos y metamodelado, y sesiones prácticas con BinWaves, HySwash/CHySwash+Veggie y HyFlood, finalizando con Climate Services.
+- **General structure:**
+  - Day 1 — Statistical Modeling & Climate Emulation (from historical climate data to synthetic climate): global databases, PCA, weather typing (KMA), statistical downscaling, and climate emulation (ALR) with a hands-on session building a climate emulator.
+  - Day 2 — Hybrid Statistical–Numerical Modeling (from climate forcing to local impacts and risk): wave downscaling, numerical model wrappers, design of numerical experiments and metamodeling, and hands-on sessions with BinWaves, HySwash/CHySwash+Veggie, and HyFlood, ending with Climate Services.
 
-- **Material y requisitos:** Notebooks, conjuntos de datos y ejercicios estarán disponibles en el repositorio. Se recomienda conocimientos básicos de Python y bibliotecas como `numpy`, `pandas`, `xarray`, `matplotlib` y `scikit-learn`.
-- **Logística:** El curso es presencial y orientado a prácticas; las instrucciones de instalación del entorno Python y dependencias estarán en la carpeta `environment` del repositorio.
-- **Resultados esperados:** Al finalizar, los participantes podrán usar `BlueMath` para construir flujos reproducibles, adaptar metodologías a sus datos y prototipar modelos estadísticos o emuladores para problemas costeros.
+- **Material and requirements:** Notebooks, datasets, and exercises will be available in the repository. Basic knowledge of Python and libraries such as `numpy`, `pandas`, `xarray`, `matplotlib`, and `scikit-learn` is recommended.
+- **Logistics:** The course is in-person and hands-on oriented; instructions for installing the Python environment and dependencies will be provided in the `environment` folder of the repository.
+- **Expected outcomes:** By the end of the course, participants will be able to use `BlueMath` to build reproducible workflows, adapt methodologies to their own data, and prototype statistical models or emulators for coastal problems.
 
-- **Contacto:** Abrir un issue en la [repositorio del curso](https://github.com/GeoOcean/BlueMath_Course_Corvallis/issues) para dudas o solicitudes específicas.
+- **Contact:** Open an issue in the [course repository](https://github.com/GeoOcean/BlueMath_Course_Corvallis/issues) for specific questions or requests.
