@@ -1,0 +1,7 @@
+toolkit/data/*.nc
+toolkit/data/logs/
+toolkit/data/noaa_data/
+toolkit/data/outputs/*
+!toolkit/data/outputs/.gitkeep
+__pycache__/
+*.pyc
