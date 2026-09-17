@@ -301,8 +301,8 @@ def transform_Offshore_spectrum(
     ):
         try:
             closest_case = (
-                ds.efth.sel(freq=case_freq, method="nearest", tolerance=0.001)
-                .sel(dir=case_dir, method="nearest", tolerance=2)
+                ds.efth.sel(freq=case_freq, method="nearest", tolerance=.3)
+                .sel(dir=case_dir, method="nearest", tolerance=8)
                 .expand_dims({"case_num": [case_num]})
             )
             case_num_spectra.append(closest_case)

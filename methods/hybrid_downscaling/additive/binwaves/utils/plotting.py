@@ -5,6 +5,7 @@ import cartopy.feature as cfeature
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import wavespectra
 import xarray as xr
 from bluemath_tk.core.operations import get_uv_components
@@ -69,6 +70,34 @@ def safe_gaussian_kde(x_data: np.ndarray, y_data: np.ndarray) -> np.ndarray:
         return np.ones_like(x_data)
 
 
+def direction_bin_edges(dir_rad: np.ndarray) -> np.ndarray:
+    """
+    Compute polar (circular) bin edges from direction bin centers, closing
+    the circle back to the first edge for use with `pcolormesh`.
+
+    Directions are stored as bin centers (e.g. 7.5 deg represents the bin
+    from 0 to 15 deg), while `pcolormesh` expects cell edges. Passing the
+    centers directly shifts every cell by half a bin and creates a visual
+    discontinuity where the circle closes.
+
+    Parameters
+    ----------
+    dir_rad : np.ndarray
+        Direction bin centers in radians, assumed evenly spaced around the
+        full circle.
+
+    Returns
+    -------
+    np.ndarray
+        Bin edges in radians, with length len(dir_rad) + 1.
+    """
+
+    n = len(dir_rad)
+    dtheta = 2 * np.pi / n
+    edges = dir_rad - dtheta / 2
+    return np.append(edges, edges[0] + 2 * np.pi)
+
+
 def axplot_spectrum(
     ax: Axes,
     x: np.ndarray,
@@ -108,7 +137,9 @@ def axplot_spectrum(
     """
 
     # fix coordinates for pcolormesh
-    x1 = np.append(x, x[0])
+    # x holds direction bin centers; convert to bin edges so each color cell
+    # aligns with the directional bin it represents (see direction_bin_edges)
+    x1 = direction_bin_edges(x)
     if plot_center:
         y1 = np.append(0, y)
     else:
@@ -137,6 +168,132 @@ def axplot_spectrum(
     ax.set_ylim(0, ylim)
 
     return p1
+
+
+def plot_case_to_site_response(
+    swan_cases_df: pd.DataFrame,
+    kp_coefficients: xr.DataArray,
+    case_num: int,
+    site: int,
+    dir_width_deg: float,
+    figsize: Tuple[float, float] = (11, 6),
+    ylim: float = 0.4,
+    case_color: str = "crimson",
+) -> Tuple[Figure, np.ndarray]:
+    """
+    Illustrate the BinWaves idea: a single offshore wave train (one case,
+    i.e. one freq/dir bin) produces a full Kp response spectrum at a given
+    output site.
+
+    Parameters
+    ----------
+    swan_cases_df : pd.DataFrame
+        SWAN case definitions, indexed by case_num, with "dir" and "freq"
+        columns giving each case's own (offshore) direction and frequency.
+    kp_coefficients : xr.DataArray
+        Kp response spectra, with dims (case_num, site, freq, dir).
+    case_num : int
+        Case number to illustrate (row of swan_cases_df / kp_coefficients).
+    site : int
+        Output site (as used by kp_coefficients.site) to illustrate.
+    dir_width_deg : float
+        Angular width, in degrees, of one case's direction bin (i.e. the
+        direction_range span divided by direction_divisions used to build
+        swan_cases_df). Case directions can span less than the full circle,
+        so this cannot be derived generically from the number of cases.
+    figsize : Tuple[float, float], optional
+        Figure size, by default (11, 6)
+    ylim : float, optional
+        Radial (frequency) axis limit shared by both subplots, by default 0.4
+    case_color : str, optional
+        Color used to highlight the case's bin, by default "crimson"
+
+    Returns
+    -------
+    Tuple[Figure, np.ndarray]
+        Figure and the two polar axes: [offshore case, site response]
+    """
+
+    case_dir = swan_cases_df.loc[case_num, "dir"]
+    case_freq = swan_cases_df.loc[case_num, "freq"]
+    case_dirs = np.sort(swan_cases_df["dir"].unique())
+    case_freqs = np.sort(swan_cases_df["freq"].unique())
+
+    # Frequency edges of the highlighted bin, as midpoints between
+    # neighboring case frequencies (the case frequency grid is non-uniform)
+    freq_mid = (case_freqs[:-1] + case_freqs[1:]) / 2
+    freq_edges = np.concatenate(
+        [
+            [case_freqs[0] - (freq_mid[0] - case_freqs[0])],
+            freq_mid,
+            [case_freqs[-1] + (case_freqs[-1] - freq_mid[-1])],
+        ]
+    )
+    i_freq = np.argmin(np.abs(case_freqs - case_freq))
+    freq_lo, freq_hi = freq_edges[i_freq], freq_edges[i_freq + 1]
+
+    kp_site = kp_coefficients.sel(case_num=case_num, site=site)
+
+    fig, axes = plt.subplots(1, 2, figsize=figsize, subplot_kw={"projection": "polar"})
+
+    # Left: the single offshore wave train that defines this case, drawn as
+    # its own active (freq, dir) bin on the case grid
+    ax0 = axes[0]
+    ax0.set_theta_zero_location("N", offset=0)
+    ax0.set_theta_direction(-1)
+    ax0.set_xticks(np.deg2rad(case_dirs))
+    ax0.set_xticklabels([f"{d:.0f}°" for d in case_dirs], fontsize=7)
+    ax0.set_rticks(case_freqs[::2])
+    ax0.set_yticklabels([f"{f:.2f}" for f in case_freqs[::2]], fontsize=7)
+    ax0.set_ylim(0, ylim)
+    ax0.grid(True, alpha=0.4)
+    ax0.bar(
+        x=np.deg2rad(case_dir),
+        height=freq_hi - freq_lo,
+        width=np.deg2rad(dir_width_deg),
+        bottom=freq_lo,
+        align="center",
+        color=case_color,
+        edgecolor="black",
+        linewidth=0.8,
+        zorder=5,
+    )
+    ax0.set_title(
+        f"Offshore\ncase {case_num}: dir={case_dir:.1f}°, freq={case_freq:.3f} Hz",
+        fontsize=11,
+    )
+
+    # Right: the resulting Kp response spectrum at the chosen site, with the
+    # originating case's bin outlined for reference
+    ax1 = axes[1]
+    p1 = axplot_spectrum(
+        ax1,
+        np.deg2rad(kp_site.dir.values),
+        kp_site.freq.values,
+        kp_site.values,
+        cmap="magma",
+    )
+    # plt.colorbar(p1, ax=ax1, orientation="vertical", shrink=0.8, pad=0.2).set_label(
+    #     "sqrt(Kp)"
+    # )
+    ax1.bar(
+        x=np.deg2rad(case_dir),
+        height=freq_hi - freq_lo,
+        width=np.deg2rad(dir_width_deg),
+        bottom=freq_lo,
+        align="center",
+        facecolor="none",
+        edgecolor=case_color,
+        linewidth=1.5,
+        zorder=5,
+    )
+    ax1.set_ylim(0, ylim)
+    ax1.set_title(f"Site {site}\nKp response", fontsize=11)
+
+    fig.suptitle("From a single offshore wave train to its site response", fontsize=13)
+    fig.tight_layout()
+
+    return fig, axes
 
 
 def Plot_spectrum(
@@ -951,6 +1108,10 @@ def plot_spectrum_in_coastline(
     offshore_spectra: xr.Dataset,
     time_to_plot: str,
     sites_for_spectrum: List[int],
+    hs_vmin: Optional[float] = None,
+    hs_vmax: Optional[float] = None,
+    spectrum_vmax: Optional[float] = None,
+    figsize: Tuple[float, float] = (20, 10),
 ) -> Tuple[Figure, Axes]:
     """
     Plot gridded graph with wave spectra visualization.
@@ -970,6 +1131,15 @@ def plot_spectrum_in_coastline(
         Time string to plot
     sites_for_spectrum : List[int]
         List of site indices for spectrum plotting
+    hs_vmin : float, optional
+        Minimum value for the Hs color scale. If None, uses the data minimum.
+    hs_vmax : float, optional
+        Maximum value for the Hs color scale. If None, uses the data maximum.
+    spectrum_vmax : float, optional
+        Maximum value (of sqrt(E)) for the offshore and per-site spectra
+        color scale. If None, each spectrum is scaled to its own maximum.
+    figsize : Tuple[float, float], optional
+        Figure size, by default (20, 10)
 
     Returns
     -------
@@ -989,6 +1159,7 @@ def plot_spectrum_in_coastline(
         time_slice = reconstructed_onshore_spectra.sel(
             time=time_to_plot, method="nearest"
         )
+        offshore_time_slice = offshore_spectra.sel(time=time_to_plot, method="nearest")
 
         # Use the utility function
         coords = detect_coordinate_system(bathy)
@@ -998,12 +1169,31 @@ def plot_spectrum_in_coastline(
         proj = coords["proj"]
         transform = coords["transform"]
 
-        # Create figure with proper projection if geographic
+        # Create figure with an extra polar subplot on the left for the
+        # offshore spectrum, and the coastline map on the right
+        fig = plt.figure(figsize=figsize)
+        gs = fig.add_gridspec(1, 2, width_ratios=[1, 3], wspace=0.05)
+
+        ax_offshore = fig.add_subplot(gs[0], projection="polar")
+        p_offshore = axplot_spectrum(
+            ax_offshore,
+            np.deg2rad(offshore_spectra.dir.values),
+            offshore_spectra.freq.values,
+            offshore_time_slice.efth.values,
+            vmax=spectrum_vmax,
+            cmap=colormap_spectra(),
+        )
+        ax_offshore.set_title("Offshore spectrum", fontsize=12)
+        ax_offshore.set_anchor("C")
+        plt.colorbar(
+            p_offshore, ax=ax_offshore, orientation="horizontal", shrink=0.8, pad=0.1
+        ).set_label("sqrt(E)")
+
         if is_geographic:
-            fig, ax = plt.subplots(figsize=(15, 6), subplot_kw={"projection": proj})
+            ax = fig.add_subplot(gs[1], projection=proj)
             ax.add_feature(cfeature.COASTLINE, linewidth=1.5)
         else:
-            fig, ax = plt.subplots(figsize=(15, 6))
+            ax = fig.add_subplot(gs[1])
 
         # Plot bathymetry as a contour
         plot_kwargs = {
@@ -1026,17 +1216,23 @@ def plot_spectrum_in_coastline(
 
         # Calculate Hs directly from the time slice
         hs_values = time_slice.kp.spec.hs().values
+        hs_cmap = colormap_spectra()
+        hs_norm = colors.Normalize(
+            vmin=hs_vmin if hs_vmin is not None else np.nanmin(hs_values),
+            vmax=hs_vmax if hs_vmax is not None else np.nanmax(hs_values),
+        )
 
         scatter_kwargs = {
             "c": hs_values,
-            "cmap": colormap_spectra(),
+            "cmap": hs_cmap,
+            "norm": hs_norm,
             "s": 20,
         }
         if is_geographic:
             scatter_kwargs["transform"] = transform
 
         phs = ax.scatter(x_vals, y_vals, **scatter_kwargs)
-        plt.colorbar(phs).set_label("Hs [m]")
+        plt.colorbar(phs, ax=ax).set_label("Hs [m]")
 
         for site in sites_for_spectrum:
             try:
@@ -1072,15 +1268,52 @@ def plot_spectrum_in_coastline(
                 # Get and plot the spectrum
                 spectrum = time_slice.isel(site=site).kp
                 if not np.all(np.isnan(spectrum)):
+                    pcm_kwargs = {"cmap": colormap_spectra()}
+                    if spectrum_vmax is not None:
+                        pcm_kwargs["vmin"] = 0
+                        pcm_kwargs["vmax"] = spectrum_vmax
+                    site_dir_rad = np.deg2rad(reconstructed_onshore_spectra.dir.values)
+                    site_freq = reconstructed_onshore_spectra.freq.values
+                    site_freq_edges = np.append(site_freq, site_freq[-1])
                     _pcm = axin.pcolormesh(
-                        np.deg2rad(reconstructed_onshore_spectra.dir.values),
-                        reconstructed_onshore_spectra.freq.values,
+                        direction_bin_edges(site_dir_rad),
+                        site_freq_edges,
                         np.sqrt(spectrum),
-                        cmap=colormap_spectra(),
+                        **pcm_kwargs,
                     )
                     axin.set_theta_zero_location("N", offset=0)
                     axin.set_theta_direction(-1)
                     axin.axis("off")
+
+                    # Draw the Hs value on top of the spectrum (instead of
+                    # hidden underneath the inset's opaque background) so
+                    # both can be seen together
+                    hs_site = hs_values[site]
+                    if not np.isnan(hs_site):
+                        axin.scatter(
+                            0.5,
+                            1.08,
+                            transform=axin.transAxes,
+                            c=[hs_site],
+                            cmap=hs_cmap,
+                            norm=hs_norm,
+                            s=70,
+                            marker="o",
+                            edgecolors="black",
+                            linewidths=0.6,
+                            zorder=10,
+                            clip_on=False,
+                        )
+                        axin.text(
+                            0.5,
+                            1.08,
+                            f"{hs_site:.1f}",
+                            transform=axin.transAxes,
+                            ha="center",
+                            va="center",
+                            fontsize=6,
+                            zorder=11,
+                        )
                 else:
                     print(f"Warning: NaN values found in spectrum for site {site}")
             except Exception as e:
@@ -1109,3 +1342,143 @@ def plot_spectrum_in_coastline(
     except Exception as e:
         print(f"Error in plot_spectrum_in_coastline: {str(e)}")
         raise
+
+
+def plot_site_time_series(
+    reconstructed_onshore_spectra: xr.Dataset,
+    bathy: xr.DataArray,
+    sites: Optional[List[int]] = None,
+    cmap_name: str = "turbo",
+    figsize: Tuple[float, float] = (18, 8),
+) -> Tuple[Figure, Dict[str, Axes]]:
+    """
+    Plot Hs, Tp and Dm time series for each site next to a map colored the
+    same way, so each line can be matched to its site location.
+
+    Parameters
+    ----------
+    reconstructed_onshore_spectra : xr.Dataset
+        Reconstructed onshore wave spectra, with a "kps" variable and a
+        "site" dimension carrying coord_x/coord_y coordinates.
+    bathy : xr.DataArray
+        Bathymetry data, used to draw the site map.
+    sites : List[int], optional
+        Site indices (positional, i.e. as used by `.isel(site=...)`) to
+        plot. If None, all sites are plotted.
+    cmap_name : str, optional
+        Name of the (continuous) colormap sampled to assign one distinct
+        color per site, by default "turbo".
+    figsize : Tuple[float, float], optional
+        Figure size, by default (18, 8)
+
+    Returns
+    -------
+    Tuple[Figure, Dict[str, Axes]]
+        Figure and a dict of axes: {"map", "hs", "tp", "dm"}
+    """
+
+    if sites is None:
+        sites = list(range(reconstructed_onshore_spectra.sizes["site"]))
+
+    cmap = matplotlib.colormaps[cmap_name]
+    site_colors = [cmap(i / max(len(sites) - 1, 1)) for i in range(len(sites))]
+
+    coords = detect_coordinate_system(bathy)
+    is_geographic = coords["is_geographic"]
+    x_coord = coords["x_coord"]
+    y_coord = coords["y_coord"]
+    proj = coords["proj"]
+    transform = coords["transform"]
+
+    # Left third: site map: right two-thirds: Hs/Tp/Dm time series
+    fig = plt.figure(figsize=figsize)
+    gs = fig.add_gridspec(3, 2, width_ratios=[1, 2], wspace=0.15, hspace=0.15)
+
+    if is_geographic:
+        ax_map = fig.add_subplot(gs[:, 0], projection=proj)
+        ax_map.add_feature(cfeature.COASTLINE, linewidth=1.2)
+    else:
+        ax_map = fig.add_subplot(gs[:, 0])
+
+    plot_kwargs = {
+        "ax": ax_map,
+        "levels": [0, -10, -25, -50, -100, -200, -500, -1000],
+        "cmap": "Blues_r",
+        "add_colorbar": False,
+    }
+    if is_geographic:
+        plot_kwargs.update({"x": x_coord, "y": y_coord, "transform": transform})
+    bathy.plot.contourf(**plot_kwargs)
+
+    x_vals = reconstructed_onshore_spectra.coord_x.values[sites]
+    y_vals = reconstructed_onshore_spectra.coord_y.values[sites]
+
+    map_scatter_kwargs = {
+        "c": site_colors,
+        "s": 60,
+        "edgecolors": "black",
+        "linewidths": 0.5,
+        "zorder": 5,
+    }
+    if is_geographic:
+        map_scatter_kwargs["transform"] = transform
+    ax_map.scatter(x_vals, y_vals, **map_scatter_kwargs)
+
+    for site, x, y in zip(sites, x_vals, y_vals):
+        annotate_kwargs = {"transform": transform} if is_geographic else {}
+        ax_map.annotate(
+            str(site),
+            (x, y),
+            textcoords="offset points",
+            xytext=(4, 4),
+            fontsize=6,
+            **annotate_kwargs,
+        )
+
+    if is_geographic:
+        ax_map.set_extent(
+            [
+                float(bathy[x_coord].min()),
+                float(bathy[x_coord].max()),
+                float(bathy[y_coord].min()),
+                float(bathy[y_coord].max()),
+            ],
+            crs=transform,
+        )
+        gl = ax_map.gridlines(draw_labels=True, linestyle="--", alpha=0.5)
+        gl.top_labels = False
+        gl.right_labels = False
+    else:
+        ax_map.set_xlim([bathy[x_coord].min(), bathy[x_coord].max()])
+        ax_map.set_ylim([bathy[y_coord].min(), bathy[y_coord].max()])
+        ax_map.grid(True, linestyle="--", alpha=0.5)
+    ax_map.set_title("Sites")
+
+    # Time series, sharing the x-axis
+    ax_hs = fig.add_subplot(gs[0, 1])
+    ax_tp = fig.add_subplot(gs[1, 1], sharex=ax_hs)
+    ax_dm = fig.add_subplot(gs[2, 1], sharex=ax_hs)
+
+    for site, color in zip(sites, site_colors):
+        site_kps = reconstructed_onshore_spectra.isel(site=site).kps
+        site_kps.spec.hs().plot(ax=ax_hs, color=color, alpha=0.7)
+        site_kps.spec.tp().plot(ax=ax_tp, color=color, alpha=0.7)
+        site_kps.spec.dm().plot(ax=ax_dm, color=color, alpha=0.7)
+
+    # crop the shared time axis to the actual time range being plotted,
+    # removing matplotlib's default autoscale padding
+    time_vals = reconstructed_onshore_spectra.time.values
+    ax_hs.set_xlim(time_vals.min(), time_vals.max())
+
+    ax_hs.set_ylabel("Hs (m)")
+    ax_tp.set_ylabel("Tp (s)")
+    ax_dm.set_ylabel("Dm (deg)")
+    ax_dm.set_xlabel("time")
+    for ax in (ax_hs, ax_tp, ax_dm):
+        ax.set_title("")
+        ax.grid(True, alpha=0.3)
+    for ax in (ax_hs, ax_tp):
+        ax.set_xlabel("")
+        plt.setp(ax.get_xticklabels(), visible=False)
+
+    return fig, {"map": ax_map, "hs": ax_hs, "tp": ax_tp, "dm": ax_dm}
