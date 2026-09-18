@@ -46,7 +46,7 @@ def animate_case_propagation(
     # Reuse one polygon: only its upper edge changes between frames.
     vertices = np.column_stack((np.r_[x, x[::-1]], np.r_[bed, bed[::-1]]))
     water, = ax.fill(vertices[:, 0], vertices[:, 1],
-                     color="deepskyblue", alpha=0.5, zorder=3)
+                     color="deepskyblue", edgecolor='wheat', linewidth=1, alpha=0.5, zorder=3)
     title = ax.set_title("")
     ax.set_ylim(min(bed.min(), -10), max(bed.max(), 6))
 
