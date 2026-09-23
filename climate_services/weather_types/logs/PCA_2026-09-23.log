@@ -1,0 +1,33 @@
+2026-09-23 09:31:07,177 - PCA - INFO - Setting self.num_workers to 1. Change it using self.set_num_processors_to_use method.
+2026-09-23 09:31:07,177 - PCA - INFO - 
+        -------------------------------------------------------------------
+        | Initializing PCA reduction model with the following parameters:
+        |    - n_components: 0.9
+        |    - is_incremental: False
+        | For more information, please refer to the documentation.
+        -------------------------------------------------------------------
+        
+2026-09-23 09:31:07,177 - PCA - INFO - Explained variance ratio: 0.9
+2026-09-23 09:31:07,177 - PCA - INFO - Using PCA
+2026-09-23 09:33:32,937 - PCA - INFO - Setting self.num_workers to 1. Change it using self.set_num_processors_to_use method.
+2026-09-23 09:33:32,937 - PCA - INFO - 
+        -------------------------------------------------------------------
+        | Initializing PCA reduction model with the following parameters:
+        |    - n_components: 0.9
+        |    - is_incremental: False
+        | For more information, please refer to the documentation.
+        -------------------------------------------------------------------
+        
+2026-09-23 09:33:32,938 - PCA - INFO - Explained variance ratio: 0.9
+2026-09-23 09:33:32,938 - PCA - INFO - Using PCA
+2026-09-23 09:33:32,941 - PCA - INFO - Adding windows in PCA dimension for rows
+2026-09-23 09:33:32,941 - PCA - INFO - Generating stacked data matrix
+2026-09-23 09:33:32,941 - PCA - INFO - Generating data matrix with variables to stack: ['mslp'] and coordinates to stack: ['latitude', 'longitude']
+2026-09-23 09:33:33,958 - PCA - WARNING - Using 6000 out of 6000 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-23 09:33:35,729 - PCA - INFO - Data matrix generated successfully with shape: (30642, 6000)
+2026-09-23 09:33:35,758 - PCA - INFO - Standarizing data matrix
+2026-09-23 09:33:37,703 - PCA - INFO - Data preprocessed successfully
+2026-09-23 09:33:39,570 - PCA - INFO - Fitting PCA model
+2026-09-23 09:34:59,913 - PCA - INFO - PCA model fitted successfully
+2026-09-23 09:35:00,690 - PCA - INFO - Inverse transforming data using PCA model
