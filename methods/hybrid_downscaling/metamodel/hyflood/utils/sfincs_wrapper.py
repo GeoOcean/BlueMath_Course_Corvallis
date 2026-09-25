@@ -241,9 +241,10 @@ class SfincsModelWrapper(BaseModelWrapper):
             epsg=case_context["epsg"],
         )
         tstart, tstop = self.set_ctimes(case_context=case_context)
-
-        sf.config["tstop"] = tstop
+        
+        sf.config["tref"] = tstart
         sf.config["tstart"] = tstart
+        sf.config["tstop"] = tstop
         sf.config["dtout"] = 60
         sf.config["storemeteo"] = 1
 
