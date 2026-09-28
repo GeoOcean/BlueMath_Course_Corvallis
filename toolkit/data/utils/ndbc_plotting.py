@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from .ndbc_data import align_directional_coefficients
+
 # Set font sizes
 TITLE_SIZE = 20
 AXIS_LABEL_SIZE = 18
@@ -829,6 +831,10 @@ def plot_average_directional_spectrum(
     end_date : str
         End date in format 'YYYY-MM-DD'
     """
+
+    alpha1_df, alpha2_df, r1_df, r2_df, c11_df = align_directional_coefficients(
+        alpha1_df, alpha2_df, r1_df, r2_df, c11_df,
+    )
 
     # Get frequencies from the columns
     freqs = np.array([float(col) for col in r1_df.columns])

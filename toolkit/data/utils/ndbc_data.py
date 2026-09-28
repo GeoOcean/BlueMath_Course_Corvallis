@@ -206,6 +206,38 @@ def get_station_coords(buoy_id: str) -> Tuple[float, float]:
     return lat, lon
 
 
+def align_directional_coefficients(*frames: pd.DataFrame) -> Tuple[pd.DataFrame, ...]:
+    """Match all five coefficient tables by timestamp and numeric frequency.
+
+    Keep only shared labels, in sorted order. Missing coefficient values mask
+    that time-frequency bin in every table; no missing directions are filled.
+    """
+    if len(frames) != 5:
+        raise ValueError("Expected alpha1, alpha2, r1, r2 and c11 tables.")
+    prepared = []
+    for name, frame in zip(("alpha1", "alpha2", "r1", "r2", "c11"), frames):
+        frame = frame.copy()
+        frame.index = pd.DatetimeIndex(frame.index)
+        frame.columns = pd.Index([float(value) for value in frame.columns])
+        if frame.index.has_duplicates or frame.columns.has_duplicates:
+            raise ValueError(f"{name}: duplicate timestamps or frequency bins.")
+        frame = frame.astype(float)
+        prepared.append(frame.where(np.isfinite(frame) & (frame < 999)))
+    times, frequencies = prepared[0].index, prepared[0].columns
+    for frame in prepared[1:]:
+        times = times.intersection(frame.index)
+        frequencies = frequencies.intersection(frame.columns)
+    times, frequencies = times.sort_values(), frequencies.sort_values()
+    if times.empty or frequencies.empty:
+        raise ValueError("Directional coefficients have no shared timestamps or frequencies.")
+    aligned = [frame.loc[times, frequencies] for frame in prepared]
+    valid = np.logical_and.reduce([frame.notna().to_numpy() for frame in aligned])
+    keep_times = valid.any(axis=1)
+    if not keep_times.any():
+        raise ValueError("No complete directional coefficient observations on the shared grid.")
+    return tuple(frame.where(valid).loc[keep_times] for frame in aligned)
+
+
 def build_directional_spectrum_dataset(
     alpha1_df: pd.DataFrame,
     alpha2_df: pd.DataFrame,
@@ -236,6 +268,10 @@ def build_directional_spectrum_dataset(
     xr.Dataset
         Directional wave spectrum with data variable "efth" (m^2/Hz/deg).
     """
+
+    alpha1_df, alpha2_df, r1_df, r2_df, c11_df = align_directional_coefficients(
+        alpha1_df, alpha2_df, r1_df, r2_df, c11_df,
+    )
 
     # NDBC's fill value for missing observations; mask it out before reconstructing.
     alpha1_vals = alpha1_df.values.copy()
