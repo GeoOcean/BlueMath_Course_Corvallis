@@ -54,7 +54,6 @@ def _build_ig_signal(h_ig, period_seconds, dt_seconds, phase=0.0):
         2 * np.pi * time / period_seconds + phase
     )
 
-
 def build_waterlevel_forcings(
     msetup,
     h_ig,
@@ -63,7 +62,7 @@ def build_waterlevel_forcings(
     reference_time,
     ig_period=200,
     dt_seconds=60,
-    warmup_hours=24,
+    warmup_hours=0,
     phase=0.0,
 ):
     """
