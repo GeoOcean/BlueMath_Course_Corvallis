@@ -122,12 +122,17 @@ def build_precipitation_forcings(
     reference_time,
     dt_minutes=60,
 ):
-    """Build precipitation forcings for all MDA cases."""
+    """
+    Build precipitation forcings for all MDA cases.
+
+    If `centroids` has no `precip_wave_lag` column, the precipitation
+    peak coincides with the wave peak.
+    """
     return [
         build_precipitation_forcing(
             precipitation=row.precipitation,
             duration=row.precip_duration,
-            lag=row.precip_wave_lag,
+            lag=row.get("precip_wave_lag", 0.0),
             reference_time=reference_time,
             dt_minutes=dt_minutes,
         )
@@ -175,10 +180,15 @@ def build_precipitation_forcing(
     start_time = peak_time - pd.Timedelta(hours=duration / 2)
     end_time = peak_time + pd.Timedelta(hours=duration / 2)
 
+    # Odd number of points (at most dt_minutes apart) so that the start, peak
+    # and end of the storm are always sampled. The series must end at zero,
+    # since SFINCS keeps the last value until the end of the simulation.
+    n_half = max(1, int(np.ceil(duration * 60 / (2 * dt_minutes))))
+
     time = pd.date_range(
         start_time,
         end_time,
-        freq=f"{dt_minutes}min",
+        periods=2 * n_half + 1,
     )
 
     hours_from_peak = (

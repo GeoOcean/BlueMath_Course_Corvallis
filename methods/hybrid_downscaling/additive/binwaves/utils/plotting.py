@@ -232,7 +232,7 @@ def plot_case_to_site_response(
     i_freq = np.argmin(np.abs(case_freqs - case_freq))
     freq_lo, freq_hi = freq_edges[i_freq], freq_edges[i_freq + 1]
 
-    kp_site = kp_coefficients.sel(case_num=case_num, site=site)
+    kp_site = kp_coefficients['kps'].sel(case_num=case_num, site=site)
 
     fig, axes = plt.subplots(1, 2, figsize=figsize, subplot_kw={"projection": "polar"})
 

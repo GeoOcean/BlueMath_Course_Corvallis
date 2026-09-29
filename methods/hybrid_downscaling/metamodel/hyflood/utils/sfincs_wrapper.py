@@ -137,24 +137,21 @@ class SfincsModelWrapper(BaseModelWrapper):
         and return it formatted as 'YYYYMMDD HHMMSS'.
         """
 
-        precip_forcing = case_context.get("precipitation_forcing")
-        waterlevel_forcing = case_context.get("waterlevel_forcing")
+        forcings = [
+            case_context.get(name)
+            for name in (
+                "precipitation_forcing",
+                "slowly_waterlevel_forcing",
+                "quickly_waterlevel_forcing",
+            )
+        ]
 
         tstart_times, tstop_times = [], []
 
-        if precip_forcing is not None:
-            tstart_precip = precip_forcing.index.values[0]
-            tstop_precip = precip_forcing.index.values[-1]
-
-            tstart_times.append(tstart_precip)
-            tstop_times.append(tstop_precip)
-
-        if waterlevel_forcing is not None:
-            tstart_waterlevel = waterlevel_forcing.index.values[0]
-            tstop_waterlevel = waterlevel_forcing.index.values[-1]
-
-            tstart_times.append(tstart_waterlevel)
-            tstop_times.append(tstop_waterlevel)
+        for forcing in forcings:
+            if forcing is not None:
+                tstart_times.append(forcing.index.values[0])
+                tstop_times.append(forcing.index.values[-1])
 
         if not tstart_times:
             raise ValueError("No forcing data found to determine TSTART.")
@@ -230,6 +227,11 @@ class SfincsModelWrapper(BaseModelWrapper):
 
         sf = SfincsModel(root=case_dir, mode="w+")
 
+        # Start from the template configuration (static input files, physics...)
+        # NOTE: sfincs.inp must not be in templates_name, or it would overwrite
+        # the configuration written here
+        sf.read_config(op.join(self.templates_dir, "sfincs.inp"))
+
         sf.setup_grid(
             x0=case_context["x0"],
             y0=case_context["y0"],
@@ -261,6 +263,7 @@ class SfincsModelWrapper(BaseModelWrapper):
             )
             sf.write_forcing()
             os.rename(op.join(case_dir, "sfincs.bzs"), op.join(case_dir, "sfincs.bzi"))
+            sf.config["bzifile"] = "sfincs.bzi"
 
         if case_context.get("slowly_waterlevel_forcing") is not None:
             sf.setup_waterlevel_forcing(
