@@ -927,3 +927,22 @@ def plot_directional_spectrum_cartesian(ds, buoy_id: str) -> plt.Figure:
 
     plt.tight_layout()
     return fig
+
+
+def plot_daily_bulk(bulk_wave_parameters, buoy_id, years):
+    """Plot daily height, periods and circular mean direction, preserving missing-data gaps."""
+    # Markers keep isolated observations visible between missing values.
+    # Keep NaNs so lines do not bridge real data gaps.
+    fig, axes = plt.subplots(3, 1, figsize=(14, 8), sharex=True, layout="constrained")
+    axes[0].plot(bulk_wave_parameters.index, bulk_wave_parameters.WVHT, color="#29ABAF", linewidth=0.6, marker=".", markersize=1.5, markeredgewidth=0)
+    axes[0].set_ylabel("Daily mean Hs (m)")
+    axes[1].plot(bulk_wave_parameters.index, bulk_wave_parameters.DPD, color="#29ABAF", linewidth=0.6, marker=".", markersize=1.5, markeredgewidth=0, label="Dominant period (DPD)")
+    axes[1].plot(bulk_wave_parameters.index, bulk_wave_parameters.APD, color="#DF826B", linewidth=0.6, marker=".", markersize=1.5, markeredgewidth=0, label="Average period (APD)")
+    axes[1].set_ylabel("Daily mean period (s)")
+    axes[1].legend()
+    axes[2].scatter(bulk_wave_parameters.index, bulk_wave_parameters.MWD, color="#29ABAF", s=1, alpha=0.3, rasterized=True)
+    axes[2].set(ylabel="Daily mean direction (°)", ylim=(0, 360), xlabel="Time")
+    for ax in axes:
+        ax.grid(alpha=0.2)
+    fig.suptitle(f"Buoy {buoy_id}: daily mean bulk wave parameters ({years[0]}–{years[-1]})")
+    return fig, axes

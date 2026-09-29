@@ -357,3 +357,106 @@ def save_netcdf(ds: xr.Dataset, output_path: str, encoding: Optional[dict] = Non
 
     shutil.move(tmp_path, output_path)
     os.chmod(output_path, 0o644)  # NamedTemporaryFile defaults to 0600
+
+
+def load_buoy_bulk(noaa_downloader, buoy_id, download_mode="period", single_year=2020,
+                   start_year=1991, end_year=2025, refresh=False):
+    """Load selected bulk years, reusing a complete CSV cache. Return data, years and CSV path."""
+    from pathlib import Path
+    from bluemath_tk.downloaders.noaa.noaa_downloader import read_bulk_parameters
+
+    bulk_csv = Path(noaa_downloader.base_path_to_download) / "NDBC" / "buoy_data" / buoy_id / f"buoy_{buoy_id}_bulk_parameters.csv"
+    if bulk_csv.exists() and not refresh:
+        cached_years = sorted(pd.read_csv(bulk_csv, usecols=["YYYY"])["YYYY"].dropna().astype(int).unique().tolist())
+        if download_mode == "single":
+            need_download = single_year not in cached_years
+        elif download_mode == "period":
+            need_download = not set(range(start_year, end_year + 1)).issubset(cached_years)
+        else:
+            need_download = True  # Discover all currently available years online.
+    else:
+        need_download = True
+    if need_download:
+        available_years = get_available_years(buoy_id, subdir="stdmet", suffix="h")
+        if not available_years:
+            raise ValueError(f"No historical bulk-parameter years found for buoy {buoy_id}.")
+    else:
+        available_years = cached_years
+    years = select_years(available_years, download_mode, buoy_id, "year(s) selected",
+                         single_year, start_year, end_year)
+    if need_download:
+        download_result = noaa_downloader.download_data(
+            data_type="bulk_parameters", buoy_id=buoy_id, years=years,
+            force=True, dry_run=False,
+        )
+        print(download_result)
+    else:
+        print(f"Reusing {bulk_csv}; set refresh=True to download again.")
+
+    # The installed reader reloads the same merged CSV for each element of years.
+    # Read it once, then explicitly filter the returned rows to the selected years.
+    buoy_df = read_bulk_parameters(
+        base_path=noaa_downloader.base_path_to_download,
+        buoy_id=buoy_id,
+        years=years[0],
+    )
+    if buoy_df is None or buoy_df.empty:
+        raise ValueError("No bulk data were read; inspect the download report above.")
+    buoy_df["datetime"] = pd.to_datetime(buoy_df["datetime"])
+    buoy_df = (buoy_df.loc[buoy_df.datetime.dt.year.isin(years)]
+               .drop_duplicates().sort_values("datetime").reset_index(drop=True))
+    missing_years = sorted(set(years) - set(buoy_df.datetime.dt.year.unique()))
+    if missing_years:
+        print(f"Selected years absent from the CSV: {missing_years}")
+    print(f"Buoy {buoy_id}: {len(buoy_df):,} bulk records, "
+          f"{buoy_df.datetime.min()} to {buoy_df.datetime.max()}")
+    return buoy_df, years, bulk_csv
+
+
+def prepare_daily_bulk(buoy_df):
+    """Clean missing codes and duplicates; return observations and daily parameters with circular direction means."""
+    # Daily means of measured bulk parameters.
+    bulk_wave_observations = buoy_df.set_index("datetime")[["WVHT", "DPD", "APD", "MWD"]].copy().sort_index()
+    # Remove missing-value codes BEFORE averaging so 99/999 do not bias the means.
+    for name in ["WVHT", "DPD", "APD"]:
+        bulk_wave_observations[name] = pd.to_numeric(bulk_wave_observations[name], errors="coerce").replace(99.0, np.nan)
+    bulk_wave_observations["MWD"] = pd.to_numeric(bulk_wave_observations.MWD, errors="coerce").replace(999.0, np.nan)
+
+    # One valid value per timestamp avoids overweighting duplicate archive rows.
+    conflicts = bulk_wave_observations.groupby(level=0).nunique() > 1
+    if conflicts.any().any():
+        raise ValueError("Conflicting duplicate bulk observations require review.")
+    bulk_wave_observations = bulk_wave_observations.groupby(level=0).first()
+    for name in ["WVHT", "DPD", "APD"]:
+        bulk_wave_observations[name] = bulk_wave_observations[name].where(bulk_wave_observations[name] > 0)
+    bulk_wave_parameters = bulk_wave_observations[["WVHT", "DPD", "APD"]].resample("1D").mean()
+    # Circular mean: e.g. 350° and 10° average to north, not 180°.
+    angle = np.deg2rad(bulk_wave_observations.MWD)
+    mean_sin = np.sin(angle).resample("1D").mean()
+    mean_cos = np.cos(angle).resample("1D").mean()
+    bulk_wave_parameters["MWD"] = (np.rad2deg(np.arctan2(mean_sin, mean_cos)) % 360).where(
+        np.hypot(mean_sin, mean_cos) > 1e-12
+    )
+
+    return bulk_wave_observations, bulk_wave_parameters
+
+
+def daily_wave_targets(bulk_wave_observations, bulk_csv, buoy_id, min_samples_per_day=1):
+    """Average per-observation Hs and Hs² × Tp; return daily targets, counts and an annotated Dataset."""
+    bulk_targets = pd.DataFrame(index=bulk_wave_observations.index)
+    bulk_targets["hs"] = bulk_wave_observations.WVHT
+    bulk_targets["energy_flux_proxy"] = (
+        bulk_wave_observations.WVHT**2 * bulk_wave_observations.DPD
+    )
+    target_counts = bulk_targets.resample("1D").count()
+    wave_daily = bulk_targets.resample("1D").mean().where(target_counts >= min_samples_per_day)
+    wave_daily.index.name = "time"
+    daily = xr.Dataset.from_dataframe(wave_daily)
+    daily["hs_count"] = xr.DataArray(target_counts.hs.values, dims="time", coords={"time": daily.time})
+    daily["flux_count"] = xr.DataArray(target_counts.energy_flux_proxy.values, dims="time", coords={"time": daily.time})
+    daily.hs.attrs.update(units="m", long_name="Daily mean observed significant wave height")
+    daily.energy_flux_proxy.attrs.update(units="m2 s", long_name="Daily mean energy index Hs squared times Tp",
+                                        formula="WVHT**2 * DPD, calculated per observation before daily averaging")
+    daily.attrs.update(source=str(bulk_csv), buoy_id=buoy_id, averaging="Mean of valid per-observation targets")
+
+    return wave_daily, target_counts, daily
