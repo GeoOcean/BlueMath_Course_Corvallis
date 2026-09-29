@@ -1,0 +1,1050 @@
+2026-09-29 13:48:53,741 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:48:53,741 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:48:53,741 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,744 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,745 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,746 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,747 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,748 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:48:53,749 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:48:53,749 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:48:53,749 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:48:53,750 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:48:54,139 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:49:11,125 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:49:11,125 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:49:11,125 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:49:11,128 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,128 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,128 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,129 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,129 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,129 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,129 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,129 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,130 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,130 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,130 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,130 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,130 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,131 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,131 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,131 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,131 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,132 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,132 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,132 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,132 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,132 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,133 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,133 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,133 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,134 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,134 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,134 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,134 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,134 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,135 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:49:11,136 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:49:11,136 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:49:11,137 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:49:11,137 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:49:11,138 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:49:11,154 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:50:26,525 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:50:26,525 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:50:26,525 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:50:26,528 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,528 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,528 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,529 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,530 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,530 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,530 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,530 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,530 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,531 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,532 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,532 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,532 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,532 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,532 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,533 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,534 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,534 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,534 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,534 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:50:26,534 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:50:26,534 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:50:26,535 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:50:26,537 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:50:26,538 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:50:26,553 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:52:24,754 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:52:24,755 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:52:24,755 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:52:24,758 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,759 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,759 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,759 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,759 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,760 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,760 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,760 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,760 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,761 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,761 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,761 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,761 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,761 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,762 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,763 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,763 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,763 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,763 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,763 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,764 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,765 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,765 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,765 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,765 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:24,765 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:52:24,765 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:52:24,766 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:52:24,767 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:52:24,768 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:52:24,779 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:52:41,163 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:52:41,163 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:52:41,163 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:52:41,167 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,167 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,168 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,169 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,170 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,171 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,172 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,173 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,173 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,173 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,173 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:41,173 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:52:41,173 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:52:41,174 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:52:41,175 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:52:41,176 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:52:41,195 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:52:55,231 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:52:55,231 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:52:55,231 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:52:55,235 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,235 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,235 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,235 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,236 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,236 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,236 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,236 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,236 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,237 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,238 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,239 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,240 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,241 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:52:55,241 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:52:55,241 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:52:55,242 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:52:55,242 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:52:55,244 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:52:55,291 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:53:17,402 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:53:17,402 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:53:17,402 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:53:17,406 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,406 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,406 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,406 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,406 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,407 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,407 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,407 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,407 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,408 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,408 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,408 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,408 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,408 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:17,413 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:53:17,413 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:53:17,414 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:53:17,414 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:53:17,415 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:53:17,426 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:53:30,186 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:53:30,186 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:53:30,186 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:53:30,191 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,191 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,191 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,191 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,191 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,192 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,193 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,194 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,195 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,196 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,196 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,196 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,196 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,196 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,197 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:53:30,197 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:53:30,197 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:53:30,197 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:53:30,198 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:53:30,199 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:53:30,212 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:57:41,826 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:57:41,827 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:57:41,827 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:57:41,830 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,831 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,831 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,831 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,831 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,831 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,832 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,833 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,834 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,835 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,836 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,836 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:41,836 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:57:41,836 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:57:41,837 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:57:41,837 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:57:41,838 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:57:41,870 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 13:57:57,669 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 13:57:57,669 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 13:57:57,669 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 13:57:57,674 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,675 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,676 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,677 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,677 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,677 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,677 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,677 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,678 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,679 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 13:57:57,680 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 13:57:57,680 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 13:57:57,682 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 13:57:57,682 - PCA_ - INFO - Fitting PCA model
+2026-09-29 13:57:57,683 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 13:57:57,730 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 14:02:10,916 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 14:02:10,916 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 14:02:10,916 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 14:02:10,919 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,919 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,920 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,920 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,920 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,920 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,920 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,921 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,921 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,921 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,921 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,921 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,922 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,922 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,922 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,922 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,922 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,923 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,924 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,924 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,924 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,924 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,924 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,925 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,925 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,925 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,925 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,926 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,926 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,926 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,926 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:10,927 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 14:02:10,927 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 14:02:10,928 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 14:02:10,928 - PCA_ - INFO - Fitting PCA model
+2026-09-29 14:02:10,930 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 14:02:19,721 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 14:02:19,722 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 14:02:19,722 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 14:02:19,725 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,726 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,726 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,726 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,726 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,727 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,727 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,727 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,727 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,727 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,728 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,728 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,728 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,728 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,729 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,729 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,729 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,733 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,733 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,733 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,733 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,734 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,734 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,734 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,735 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,735 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,735 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,735 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,736 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,737 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,737 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:19,737 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 14:02:19,737 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 14:02:19,738 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 14:02:19,738 - PCA_ - INFO - Fitting PCA model
+2026-09-29 14:02:19,739 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 14:02:25,986 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 14:02:25,991 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 14:02:25,991 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 14:02:25,995 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,995 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,995 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,995 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,996 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,996 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,997 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,999 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:25,999 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,000 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,000 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,000 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,001 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,001 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,001 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,001 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,001 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,002 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,002 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,002 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,002 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,003 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,003 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,003 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,003 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,003 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,004 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,004 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,004 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,006 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,007 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,007 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,007 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,007 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,007 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,008 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:02:26,008 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 14:02:26,008 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 14:02:26,009 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 14:02:26,012 - PCA_ - INFO - Fitting PCA model
+2026-09-29 14:02:26,013 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 14:02:26,692 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
