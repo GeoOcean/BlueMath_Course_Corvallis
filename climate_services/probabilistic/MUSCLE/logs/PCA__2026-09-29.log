@@ -1048,3 +1048,84 @@ If this is originated by using few times, please check 'nan_threshold_to_drop' p
 2026-09-29 14:02:26,012 - PCA_ - INFO - Fitting PCA model
 2026-09-29 14:02:26,013 - PCA_ - INFO - PCA model fitted successfully
 2026-09-29 14:02:26,692 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
+2026-09-29 14:25:14,405 - PCA_ - INFO - Adding windows in PCA dimension for rows
+2026-09-29 14:25:14,405 - PCA_ - INFO - Generating stacked data matrix
+2026-09-29 14:25:14,405 - PCA_ - INFO - Generating data matrix with variables to stack: ['Cluster-1', 'Cluster-2', 'Cluster-3', 'Cluster-4', 'Cluster-5', 'Cluster-6', 'Cluster-7', 'Cluster-8', 'Cluster-9', 'Cluster-10', 'Cluster-11', 'Cluster-12', 'Cluster-13', 'Cluster-14', 'Cluster-15', 'Cluster-16', 'Cluster-17', 'Cluster-18', 'Cluster-19', 'Cluster-20', 'Cluster-21', 'Cluster-22', 'Cluster-23', 'Cluster-24', 'Cluster-25', 'Cluster-26', 'Cluster-27', 'Cluster-28', 'Cluster-29', 'Cluster-30', 'Cluster-31', 'Cluster-32', 'Cluster-33', 'Cluster-34', 'Cluster-35', 'Cluster-36'] and coordinates to stack: ['time']
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,409 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,410 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,411 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,412 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,413 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - WARNING - Using 1 out of 1 available variables 
+If this is originated by using few times, please check 'nan_threshold_to_drop' parameter in fit method
+2026-09-29 14:25:14,414 - PCA_ - INFO - Data matrix generated successfully with shape: (47, 36)
+2026-09-29 14:25:14,414 - PCA_ - INFO - Standarizing data matrix
+2026-09-29 14:25:14,415 - PCA_ - INFO - Data preprocessed successfully
+2026-09-29 14:25:14,416 - PCA_ - INFO - Fitting PCA model
+2026-09-29 14:25:14,417 - PCA_ - INFO - PCA model fitted successfully
+2026-09-29 14:25:14,705 - PCA_ - WARNING - Attribute pcs is an xarray Dataset / Dataarray and will be pickled!
