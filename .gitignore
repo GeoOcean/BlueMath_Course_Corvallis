@@ -3,5 +3,12 @@ toolkit/data/logs/
 toolkit/data/noaa_data/
 toolkit/data/outputs/*
 !toolkit/data/outputs/.gitkeep
+toolkit/regression/outputs/*
+!toolkit/regression/outputs/.gitkeep
+toolkit/datamining/outputs/*
+!toolkit/datamining/outputs/.gitkeep
+methods/hybrid_downscaling/additive/binwaves
 __pycache__/
 *.pyc
+
+*.DS_Store
