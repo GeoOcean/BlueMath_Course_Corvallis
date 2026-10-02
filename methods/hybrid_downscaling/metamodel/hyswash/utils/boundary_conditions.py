@@ -40,3 +40,76 @@ def get_real_scenarios_from_dataset(lhs_dataset, h0, tp_min=7, tp_max=None):
     df_dataset = lhs_dataset.loc[df_centroids.index]
 
     return df_dataset
+
+def reconstruct_binwaves_point(offshore_spectra, kp_coeffs, swan_cases, lon, lat):
+    """
+    Reconstruct the wave climate at the BinWaves output site closest to (lon, lat).
+
+    It follows the BinWaves reconstruction: the offshore spectrum is smoothed
+    and coarsened, its energy in each case bin (freq, dir) is weighted by the
+    propagation coefficients (kp) of the site, and all cases are added up.
+
+    Parameters
+    ----------
+    offshore_spectra : xarray.Dataset
+        Offshore spectra with "efth" (time, freq, dir) in m2/Hz/deg, as saved
+        by the NDBC notebook.
+    kp_coeffs : xarray.Dataset
+        BinWaves propagation coefficients "kps" (case_num, site, freq, dir),
+        with site coordinates "coord_x" and "coord_y".
+    swan_cases : pandas.DataFrame
+        BinWaves cases with the "freq" and "dir" of each case_num.
+    lon, lat : float
+        Location of interest.
+
+    Returns
+    -------
+    xarray.Dataset
+        Hs, Tp and Hs_L0 time series at the selected site, which is stored in
+        the attributes with its coordinates.
+    """
+    import wavespectra  # noqa: F401 (registers the .spec accessor)
+    import xarray as xr
+
+    site = int(
+        np.argmin(
+            np.hypot(kp_coeffs.coord_x.values - lon, kp_coeffs.coord_y.values - lat)
+        )
+    )
+    kp = kp_coeffs["kps"].isel(site=site)
+
+    # Same preprocessing as in BinWaves (smoothing in blocks of time to save memory)
+    efth = offshore_spectra["efth"]
+    efth = xr.concat(
+        [
+            efth.isel(time=slice(i, i + 500))
+            .rolling(freq=5, center=True, min_periods=1)
+            .mean()
+            for i in range(0, efth.sizes["time"], 500)
+        ],
+        dim="time",
+    )
+    efth = efth.coarsen(freq=3, dir=3, boundary="pad").mean()
+    efth = efth.reindex(freq=kp.freq, dir=kp.dir, method="nearest")
+
+    # Offshore energy in the bin of each case
+    cases = swan_cases.loc[kp.case_num.values]
+    case_energy = efth.sel(
+        freq=xr.DataArray(cases["freq"].values, dims="case_num"),
+        dir=xr.DataArray(cases["dir"].values, dims="case_num"),
+        method="nearest",
+    ).drop_vars(["freq", "dir"]).assign_coords(case_num=kp.case_num.values)
+
+    # Onshore spectrum: weighted sum of the propagated cases
+    onshore = xr.dot(case_energy, kp, dim="case_num").rename("efth")
+
+    hs = onshore.spec.hs().reset_coords(drop=True)
+    tp = onshore.spec.tp().reset_coords(drop=True)
+    return xr.Dataset(
+        {"Hs": hs, "Tp": tp, "Hs_L0": hs / (9.806 * tp**2 / (2 * np.pi))},
+        attrs={
+            "site": site,
+            "lon": float(kp_coeffs.coord_x[site]),
+            "lat": float(kp_coeffs.coord_y[site]),
+        },
+    ).dropna("time")
