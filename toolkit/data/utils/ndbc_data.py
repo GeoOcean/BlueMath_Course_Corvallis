@@ -363,9 +363,8 @@ def load_buoy_bulk(noaa_downloader, buoy_id, download_mode="period", single_year
                    start_year=1991, end_year=2025, refresh=False):
     """Load selected bulk years, reusing a complete CSV cache. Return data, years and CSV path."""
     from pathlib import Path
-    from bluemath_tk.downloaders.noaa.noaa_downloader import read_bulk_parameters
 
-    bulk_csv = Path(noaa_downloader.base_path_to_download) / "NDBC" / "buoy_data" / buoy_id / f"buoy_{buoy_id}_bulk_parameters.csv"
+    bulk_csv = Path(noaa_downloader.base_path_to_download) / "buoy_data" / buoy_id / f"buoy_{buoy_id}_bulk_parameters.csv"
     if bulk_csv.exists() and not refresh:
         cached_years = sorted(pd.read_csv(bulk_csv, usecols=["YYYY"])["YYYY"].dropna().astype(int).unique().tolist())
         if download_mode == "single":
@@ -385,21 +384,17 @@ def load_buoy_bulk(noaa_downloader, buoy_id, download_mode="period", single_year
     years = select_years(available_years, download_mode, buoy_id, "year(s) selected",
                          single_year, start_year, end_year)
     if need_download:
+        # The selected years are merged into a single CSV per buoy (overwritten on every call).
         download_result = noaa_downloader.download_data(
             data_type="bulk_parameters", buoy_id=buoy_id, years=years,
-            force=True, dry_run=False,
         )
         print(download_result)
     else:
         print(f"Reusing {bulk_csv}; set refresh=True to download again.")
 
-    # The installed reader reloads the same merged CSV for each element of years.
+    # The reader reloads the same merged CSV for each element of years.
     # Read it once, then explicitly filter the returned rows to the selected years.
-    buoy_df = read_bulk_parameters(
-        base_path=noaa_downloader.base_path_to_download,
-        buoy_id=buoy_id,
-        years=years[0],
-    )
+    buoy_df = noaa_downloader.read_bulk_parameters(buoy_id=buoy_id, years=years[0])
     if buoy_df is None or buoy_df.empty:
         raise ValueError("No bulk data were read; inspect the download report above.")
     buoy_df["datetime"] = pd.to_datetime(buoy_df["datetime"])

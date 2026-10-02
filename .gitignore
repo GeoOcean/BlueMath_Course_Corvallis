@@ -1,4 +1,5 @@
 toolkit/data/*.nc
+toolkit/data/buoy_*_bulk_wave_parameters_daily.csv
 toolkit/data/logs/
 toolkit/data/noaa_data/
 toolkit/data/outputs/*
