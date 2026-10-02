@@ -186,61 +186,86 @@ def plot_depthfile(depth=None, depthfile=None, ax=None, xlim=None, dxinp=1):
     return ax
 
 
-def plot_scatters_Tp(df_centroids, df_lhs_data, scatter_points_thick=10):
-    """
-    Plot peak wave period (Tp) scatter plots in triangular format.
+def steepness_to_Tp(df):
+    """Return a copy of df with Hs_L0 replaced by the peak period Tp.
 
-    This function calculates the peak wave period (Tp) from significant wave height (Hs)
-    and wave steepness (Hs_L0) using the deep water wave dispersion relation, then creates
-    scatter plots comparing different wave and vegetation parameters.
+    Tp is obtained from the deep-water relation Tp = sqrt(2 * pi * Hs / (g * Hs_L0)),
+    and is placed in the same column position that Hs_L0 occupied.
+    """
+    df = df.copy()
+    df["Hs_L0"] = np.sqrt((2 * np.pi * df["Hs"]) / (9.806 * df["Hs_L0"]))
+    return df.rename(columns={"Hs_L0": "Tp"})
+
+
+def plot_scatters_Tp(df_centroids, df_data, s=10, data_colors=("blue", "red")):
+    """
+    Plot the sampled data and selected centroids in triangular scatter plots,
+    showing the peak period Tp instead of the wave steepness Hs_L0.
 
     Parameters
     ----------
     df_centroids : pandas.DataFrame
-        DataFrame containing centroid data with wave and vegetation parameters.
-        Expected columns: 'Hs', 'Hs_L0', 'Wv', 'hv', 'Nv'
-    df_lhs_data : pandas.DataFrame
-        DataFrame containing Latin Hypercube Sampling data with the same parameters.
-        Expected columns: 'Hs', 'Hs_L0', 'Wv', 'hv', 'Nv'
-    scatter_points_thick : int
+        Selected cases. Must contain 'Hs' and 'Hs_L0' columns.
+    df_data : pandas.DataFrame
+        Full dataset (e.g. LHS samples) with the same columns.
+    s : float
+        Marker size.
+    data_colors : sequence of str
+        Colors for the data and the centroids, respectively.
 
     Returns
     -------
     tuple
-        A tuple containing (fig, axes) from the triangular scatter plot
-
-    Notes
-    -----
-    The peak wave period is calculated using the formula:
-    Tp = sqrt((Hs * 2 * π) / (g * Hs_L0))
-
-    Where:
-    - Hs: Significant wave height (m)
-    - Hs_L0: Wave steepness (dimensionless)
-    - g: Gravitational acceleration (9.806 m/s²)
-
-    The function creates scatter plots with:
-    - Blue points: LHS data
-    - Red points: Centroid data
+        (fig, axes) from the triangular scatter plot.
     """
-
-    # Note: The following lines should use the function parameters instead of 'mda'
-
-    df_centroids["Tp"] = np.sqrt(
-        (df_centroids["Hs"].values * 2 * np.pi) / (9.806 * df_centroids["Hs_L0"])
-    )
-    df_lhs_data["Tp"] = np.sqrt(
-        (df_lhs_data["Hs"].values * 2 * np.pi) / (9.806 * df_lhs_data["Hs_L0"])
-    )
-    df_centroids = df_centroids.drop(columns=["Hs_L0"])
-    df_lhs_data = df_lhs_data.drop(columns=["Hs_L0"])
-    df_centroids = df_centroids[["Hs", "Tp", "Wv", "hv", "Nv"]]
-    df_lhs_data = df_lhs_data[["Hs", "Tp", "Wv", "hv", "Nv"]]
-
     fig, axes = plot_scatters_in_triangle(
-        dataframes=[df_lhs_data, df_centroids],
-        s=scatter_points_thick,
-        data_colors=["blue", "red"],
+        dataframes=[steepness_to_Tp(df_data), steepness_to_Tp(df_centroids)],
+        data_colors=list(data_colors),
+        s=s,
     )
-    fig.set_size_inches(8, 8)
+    return fig, axes
 
+
+def plot_scatters_colored(df, variables, color, cmap="rainbow", s=35):
+    """
+    Plot variables against each other in triangular scatter plots, coloring
+    the points by another column (e.g. Ru2).
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        Data containing the plotted variables and the color column.
+    variables : list of str
+        Columns to plot against each other.
+    color : str
+        Column used to color the points.
+    cmap : str
+        Matplotlib colormap.
+    s : float
+        Marker size.
+
+    Returns
+    -------
+    tuple
+        (fig, axes) with the triangular scatter plots.
+    """
+    n = len(variables) - 1
+    fig, axes = plt.subplots(n, n, figsize=(3 * n + 1, 3 * n), squeeze=False)
+    norm = colors.Normalize(vmin=df[color].min(), vmax=df[color].max())
+
+    for c1, v1 in enumerate(variables[1:]):
+        for c2, v2 in enumerate(variables[:-1]):
+            ax = axes[c2, c1]
+            if c1 < c2:
+                fig.delaxes(ax)
+                continue
+            ax.scatter(df[v1], df[v2], c=df[color], cmap=cmap, norm=norm, s=s)
+            if c1 == c2:
+                ax.set_xlabel(v1)
+                ax.set_ylabel(v2)
+            else:
+                ax.xaxis.set_ticklabels([])
+                ax.yaxis.set_ticklabels([])
+
+    fig.colorbar(cm.ScalarMappable(norm=norm, cmap=cmap), ax=axes, label=color)
+    return fig, axes

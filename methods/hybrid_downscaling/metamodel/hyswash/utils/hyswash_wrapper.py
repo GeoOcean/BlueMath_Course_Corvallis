@@ -6,7 +6,7 @@ from typing import Optional, Sequence, Tuple, Union
 
 import numpy as np
 from bluemath_tk.waves.series import series_TMA
-from swash_wrapper import SwashModelWrapper
+from .swash_wrapper import SwashModelWrapper
 
 FrictionZone = Tuple[float, float, float]
 

@@ -9,7 +9,7 @@ from scipy.signal import find_peaks
 
 from bluemath_tk.waves.series import series_TMA, waves_dispersion
 from bluemath_tk.waves.spectra import spectral_analysis
-from bluemath_tk._base_wrappers import BaseModelWrapper
+from bluemath_tk.wrappers._base_wrappers import BaseModelWrapper
 
 np.random.seed(42)  # TODO: check global behavior.
 
@@ -219,15 +219,13 @@ class SwashModelWrapper(BaseModelWrapper):
             The pandas DataFrame.
         """
 
-        f = open(file_path, "r")
-        lines = f.readlines()
-        # read head colums (variables names)
-        names = lines[4].split()
-        names = names[1:]  # Eliminate '%'
-        # read data rows
-        values = pd.Series(lines[7:]).str.split(expand=True).values.astype(float)
-        df = pd.DataFrame(values, columns=names)
-        f.close()
+        with open(file_path, "r") as f:
+            # read head colums (variables names)
+            names = [next(f) for _ in range(5)][4].split()[1:]  # Eliminate '%'
+        # read data rows (read_csv is much lighter in memory than splitting lines)
+        df = pd.read_csv(
+            file_path, sep=r"\s+", skiprows=7, header=None, names=names, dtype=float
+        )
 
         return df
 
@@ -251,6 +249,17 @@ class SwashModelWrapper(BaseModelWrapper):
         xr.Dataset
             The xarray Dataset.
         """
+
+        # A diverged SWASH run writes NaNs and then keeps doubling its time step,
+        # so output times stop being regular and Tsec can no longer be an index
+        df_run_check = self._read_tabfile(file_path=run_path)
+        nan_times = df_run_check.loc[df_run_check["Runlev"].isna(), "Tsec"]
+        if not nan_times.empty:
+            raise ValueError(
+                f"SWASH run became unstable (NaN values from t = {nan_times.iloc[0]:.1f} s). "
+                "Check the PRINT file; consider smoothing the bathymetry near the "
+                "shoreline or reducing the time step."
+            )
 
         df_output = self._read_tabfile(file_path=output_path)
 
@@ -350,9 +359,12 @@ class SwashModelWrapper(BaseModelWrapper):
         overwrite_output_postprocessed: bool = True,
         remove_tab: bool = False,
         remove_nc: bool = False,
+        **kwargs,
     ) -> xr.Dataset:
         """
         Convert tab output files to netCDF file.
+        Extra keyword arguments passed by the base wrapper (e.g. case_context)
+        are not needed here and are ignored.
 
         Parameters
         ----------
@@ -678,7 +690,7 @@ class SwashModelWrapper(BaseModelWrapper):
 
             df_H_spectral.loc[x, "Hs"] = Hs
             df_H_spectral.loc[x, "Hss"] = Hss
-            df_H_spectral.loc[x, "ig"] = Hig
+            df_H_spectral.loc[x, "Hig"] = Hig
             df_H_spectral.loc[x, "Hvlf"] = Hvlf
 
         # convert pd DataFrame to xr Dataset

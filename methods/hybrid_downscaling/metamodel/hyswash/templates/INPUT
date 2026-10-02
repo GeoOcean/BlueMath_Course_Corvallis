@@ -2,7 +2,8 @@ $Project name
 PROJECT 'HySwash' '{{ case_num }}'
 $
 $Set water level
-SET LEVEL={{ WL }}
+$DEPMIN: minimum depth for drying/flooding (1 cm keeps the swash front stable)
+SET LEVEL={{ WL }} DEPMIN=0.01
 $
 $(1D-mode, flume) or (2D-mode, basin)
 MODE DYNanic ONED
@@ -42,7 +43,8 @@ $Time integration
 TIMEI 0.1 0.5
 $
 QUANTITY XP hexp=10
-QUANT RUNUP delrp 0.01
+$Runup threshold must be larger than DEPMIN (thin films left after uprush)
+QUANT RUNUP delrp 0.05
 $
 CURVE 'line' 0 0 {{ xlenc }} {{ xlenc }} 0
 TABLE 'line' HEAD 'output.tab' TSEC XP DEP WATL OUTPUT 0 1 SEC
