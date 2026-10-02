@@ -7,7 +7,8 @@ toolkit/regression/outputs/*
 !toolkit/regression/outputs/.gitkeep
 toolkit/datamining/outputs/*
 !toolkit/datamining/outputs/.gitkeep
-methods/hybrid_downscaling/additive/binwaves
+methods/hybrid_downscaling/additive/binwaves/outputs/*
+!methods/hybrid_downscaling/additive/binwaves/outputs/.gitkeep
 climate_services/probabilistic/MUSCLE/outputs/
 climate_services/probabilistic/MUSCLE/outputs/.gitkeep
 __pycache__/
