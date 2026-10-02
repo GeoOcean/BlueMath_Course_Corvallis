@@ -26,7 +26,7 @@ class SfincsModelWrapper(BaseModelWrapper):
     available_launchers = {
         "docker": "docker run --rm -v .:/case_dir -w /case_dir deltares/sfincs-cpu",
         "cluster": "launchSfincs.sh",
-        "serial": "/workspaces/BlueMath_Course_Corvallis/exe/sfincs",
+        "serial": op.abspath(op.join(op.dirname(__file__), "..", "exe", "sfincs")),
     }
 
     def __init__(
