@@ -239,36 +239,14 @@ def align_directional_coefficients(*frames: pd.DataFrame) -> Tuple[pd.DataFrame,
 
 
 def build_directional_spectrum_dataset(
-    alpha1_df: pd.DataFrame,
-    alpha2_df: pd.DataFrame,
-    r1_df: pd.DataFrame,
-    r2_df: pd.DataFrame,
-    c11_df: pd.DataFrame,
-    latitude: float,
-    longitude: float,
-) -> xr.Dataset:
+    alpha1_df, alpha2_df, r1_df, r2_df, c11_df, latitude, longitude,
+):
     """
-    Reconstruct the full directional wave spectrum from NDBC's Fourier
-    coefficient files, as an "offshore_spectra"-format Dataset (dims: time,
-    freq, dir; variable: efth; scalar coords: latitude, longitude).
-
-    Parameters
-    ----------
-    alpha1_df, alpha2_df, r1_df, r2_df, c11_df : pd.DataFrame
-        Directional spectrum coefficients, each with a datetime index and
-        frequency (Hz) columns, as returned by
-        `bluemath_tk.downloaders.noaa.noaa_downloader.read_directional_spectra`.
-    latitude : float
-        Buoy latitude in degrees.
-    longitude : float
-        Buoy longitude in degrees (any convention; converted to 0-360).
-
-    Returns
-    -------
-    xr.Dataset
-        Directional wave spectrum with data variable "efth" (m^2/Hz/deg).
+    Reconstruct the directional wave spectrum (dims: time, freq, dir; "efth" in
+    m^2/Hz/deg) from NDBC's Fourier coefficients. Negative values of D are
+    clipped BEFORE normalizing, so D integrates exactly to 1 over direction and
+    no energy is added to C11.
     """
-
     alpha1_df, alpha2_df, r1_df, r2_df, c11_df = align_directional_coefficients(
         alpha1_df, alpha2_df, r1_df, r2_df, c11_df,
     )
@@ -295,18 +273,14 @@ def build_directional_spectrum_dataset(
     cos2 = np.cos(2 * (theta_rad[None, None, :] - alpha2_rad[:, :, None]))
     D = (1 / np.pi) * (0.5 + r1[:, :, None] * cos1 + r2[:, :, None] * cos2)
 
-    # Normalize D to integrate to 1 over the (periodic, evenly-spaced) direction axis
+    # FIX: clip the non-physical negative lobes FIRST...
+    D[D < 0] = 0
+    # ...and THEN normalize D to integrate to 1 over the (periodic,
+    # evenly-spaced) direction axis, so no energy is added to C11.
     dtheta = 2 * np.pi / len(dir_deg)
     D = D / (np.nansum(D, axis=-1, keepdims=True) * dtheta)
-    D[D < 0] = 0
 
     efth = c11_vals[:, :, None] * D  # (time, freq, dir), m^2/Hz/rad
-
-    # The "dir" coordinate is stored in degrees (readable, CF-friendly), so efth
-    # must be converted from per-radian to per-degree density -- otherwise any
-    # integration over "dir" using the coordinate's own values (e.g. xarray's
-    # `.integrate("dir")`, used to recover Hs = 4*sqrt(m0)) silently mixes units
-    # and comes out ~57x (180/pi) too large.
     efth = efth * (np.pi / 180.0)  # m^2/Hz/rad -> m^2/Hz/deg
 
     ds_out = xr.Dataset(
@@ -455,3 +429,10 @@ def daily_wave_targets(bulk_wave_observations, bulk_csv, buoy_id, min_samples_pe
     daily.attrs.update(source=str(bulk_csv), buoy_id=buoy_id, averaging="Mean of valid per-observation targets")
 
     return wave_daily, target_counts, daily
+
+def integrate_dir_periodic(efth):
+    """Integrate over the periodic direction axis (closes the 355-360 deg gap
+    that a plain trapezoidal `.integrate("dir")` from 0 to 355 deg leaves out)."""
+    ddir = float(efth["dir"].diff("dir")[0])
+    return efth.sum("dir") * ddir
+
